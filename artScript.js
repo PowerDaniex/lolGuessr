@@ -2,7 +2,7 @@
 var scale = 2.5;
 
 
-url = "http://ddragon.leagueoflegends.com/cdn/9.3.1/data/en_US/champion.json";
+url = "champion.json";
 
 var champions;
 var championList = [];
