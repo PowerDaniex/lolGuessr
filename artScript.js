@@ -141,12 +141,14 @@ function randomChampion()
 
   selectedChamp = champions["data"].getByIndex(getRandomInt(getLength()));
   // $("#champImg").attr("src", "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg");
+  $("#refreshBtn").disabled = true;
   var img = new Image;
   img.src = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg";
   img.onload = function()
   {
     var canvas = $("#champImg")[0].getContext("2d");
     canvas.drawImage(img, 0, 0, 700, 413);
+    $("#refreshBtn").disabled = false;
   }
   
   tempChampList.forEach(champ =>
