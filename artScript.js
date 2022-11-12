@@ -123,6 +123,7 @@ function bad(prepared)
   tempChampList.push(prepared);
   $("option[value='" + prepared + "']").remove();
   $(".submit")[0].value = "";
+  $("#champImg")[0].getContext("2d").scale(0.95, 0.95);
 
   alert("BAD");
 }
