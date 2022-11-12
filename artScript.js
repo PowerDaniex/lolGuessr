@@ -80,7 +80,6 @@ function submit()
         howManyLeft.push(champ);
     });
 
-    console.log(howManyLeft.length);
     if (howManyLeft.length == 1)
     {
       prepared = howManyLeft[0];
@@ -122,7 +121,6 @@ function good()
 function bad(prepared)
 {
   tempChampList.push(prepared);
-  console.log($("option[value='" + prepared + "']"));
   $("option[value='" + prepared + "']").remove();
   $(".submit")[0].value = "";
 
@@ -149,7 +147,6 @@ function randomChampion()
     var canvas = $("#champImg")[0].getContext("2d");
     canvas.drawImage(img, 0, 0, 700, 413);
   }
-  console.log(img);
   
   tempChampList.forEach(champ =>
   {
