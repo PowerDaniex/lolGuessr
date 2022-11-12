@@ -2,7 +2,7 @@
 var scale = 2.5;
 
 
-url = "champion.json";
+url = "champions.json";
 
 var champions;
 var championList = [];
