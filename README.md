@@ -1,1 +1,1 @@
-Simple project
+Simple project based on loldle.net
