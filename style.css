@@ -1,0 +1,139 @@
+body
+{
+    margin: 0;
+}
+
+#background
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index:-1;
+}
+
+/* .champImgContainer
+{
+    max-height: 413px;
+    max-width: 702px;
+    display: grid;
+    padding: 2px;
+    background-image: linear-gradient(to bottom,#9f7633, #4e3614);
+    border-radius: 24px;
+} */
+
+#champImg
+{
+    border-radius: 20px;
+}
+
+#ImgChamp
+{
+    border-radius: 20px;
+}
+
+.submit
+{
+    background-color: #1a1a1a;
+    border-width: 0;
+    border-radius: 15px;
+
+    height: 40px;
+    width: 500px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+
+    color: white;
+}
+
+#reset
+{
+    background-image: linear-gradient(to bottom,#9f7633, #4e3614);
+    width: 144px;
+    height: 54px;
+    margin-top: 30px;
+}
+
+#reset button
+{
+    width: 140px;
+    height: 50px;
+    border-width: 0;
+    margin: 2px;
+    background-color: #0e1115;
+    color: #b09f6c;
+    font-size: 25px;
+}
+
+#reset:hover
+{
+    box-shadow: 0px 0px 15px 0px #9f7633;
+}
+
+#reset:hover button
+{
+    background-color: #171c22;
+}
+
+
+#settingsBtn
+{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-image: linear-gradient(to bottom,#9f7633, #4e3614);
+}
+
+#settingsBtn button
+{
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 65px;
+    height: 65px;
+    border-radius: 35px;
+    background-color: #0e1115;
+}
+
+#settingsBtn:hover
+{
+    box-shadow: 0px 0px 15px 0px #7c5c28;
+}
+
+#settingsBtn:hover button
+{
+    background-color: #171c22;
+}
+
+#settingsBtn button img
+{
+    height: 55px;
+    width: 55px;
+    margin: -15;
+}
+
+#refreshBtn
+{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    /* margin-left: 10px; */
+    right: 10px;
+    top: 20px;
+    border-width: 0;
+
+    background-color: transparent;
+    background-image: url("Assets/button-replay-normal.png");
+    background-size: 70px 70px;
+}
+
+#refreshBtn:hover
+{
+    background-image: url("Assets/button-replay-hover.png");
+}
+
+#refreshBtn:focus
+{
+    background-image: url("Assets/button-replay-click.png");
+}

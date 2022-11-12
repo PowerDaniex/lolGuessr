@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery.js"></script>
+        <script src="artScript.js"></script>
+    </head>
+    <body>
+        <img id="background" src="Assets/background.png" height="100%" width="100%">
+        <!-- <div id="settingsBtn">
+            <button onclick="openSettings()">
+                <img src="Assets/Settings.png"alt="">
+            </button>
+        </div> -->
+
+        <button id="refreshBtn" onclick="randomChampion()"></button>
+        <br>
+        <br>
+        <center>
+        <div class="champImgContainer">
+            <canvas id="champImg" width="700px" height="413px"></canvas>
+            <img id="ImgChamp" src="" alt="" width="700px" style="display:none;">
+        </div>
+            <input onkeydown="check(this)" class="submit" type="text" list="champions">
+            <datalist id="champions"></datalist>
+            <div id="reset">
+                <button onclick="randomChampion()">Reset</button>
+            </div>
+        </center>
+    </body>
+</html>
