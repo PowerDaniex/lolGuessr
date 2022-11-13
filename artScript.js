@@ -105,8 +105,6 @@ function submit()
 
 function good()
 {
-  // randomChampion();
-  // alert("GOOD");
   $(".submit")[0].value = "";
 
   $("#ImgChamp").attr("src", "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg");
@@ -123,7 +121,8 @@ function bad(prepared)
   tempChampList.push(prepared);
   $("option[value='" + prepared + "']").remove();
   $(".submit")[0].value = "";
-  $("#champImg")[0].getContext("2d").scale(0.95, 0.95);
+  $("#champImg")[0].getContext("2d").scale(0.9, 0.9);
+  reRender();
 
   alert("BAD");
 }
@@ -140,16 +139,7 @@ function randomChampion()
   $(".submit").focus();
 
   selectedChamp = champions["data"].getByIndex(getRandomInt(getLength()));
-  // $("#champImg").attr("src", "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg");
-  $("#refreshBtn").disabled = true;
-  var img = new Image;
-  img.src = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg";
-  img.onload = function()
-  {
-    var canvas = $("#champImg")[0].getContext("2d");
-    canvas.drawImage(img, 0, 0, 700, 413);
-    $("#refreshBtn").disabled = false;
-  }
+  reRender();
   
   tempChampList.forEach(champ =>
   {
@@ -163,6 +153,19 @@ function prepareText(text)
   text = text.toLowerCase();
   text = text.replace(/[^a-z0-9]/gi,'');
   return text;
+}
+
+function reRender()
+{
+  $("#refreshBtn").disabled = true;
+  var img = new Image;
+  img.src = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + selectedChamp["id"] + "_0.jpg";
+  img.onload = function()
+  {
+    var canvas = $("#champImg")[0].getContext("2d");
+    canvas.drawImage(img, 0, 0, 700, 413);
+    $("#refreshBtn").disabled = false;
+  }
 }
 
 
