@@ -49,7 +49,6 @@ function start()
     });
   
   $("#champImg")[0].getContext("2d").scale(scale, scale);
-  $("#champImg")[0].getContext("2d").save();
   
   randomChampion();
 }
@@ -140,7 +139,7 @@ function randomChampion()
   $(".submit").focus();
 
   selectedChamp = champions["data"].getByIndex(getRandomInt(getLength()));
-  $("#champImg")[0].getContext("2d").restore();
+  $("#champImg")[0].getContext("2d").setTransform(1, 0, 0, 1, 0, 0);
   reRender();
   
   tempChampList.forEach(champ =>
