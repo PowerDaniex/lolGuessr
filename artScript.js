@@ -114,6 +114,7 @@ function good()
 
   $("#reset").css("display", "block");
   $(".submit").attr("disabled", true);
+  $("#champImg")[0].getContext("2d").setTransform(1, 0, 0, 1, 0, 0);
 }
 
 function bad(prepared)
@@ -139,7 +140,6 @@ function randomChampion()
   $(".submit").focus();
 
   selectedChamp = champions["data"].getByIndex(getRandomInt(getLength()));
-  $("#champImg")[0].getContext("2d").setTransform(1, 0, 0, 1, 0, 0);
   reRender();
   
   tempChampList.forEach(champ =>
