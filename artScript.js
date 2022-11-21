@@ -114,7 +114,7 @@ function good()
 
   $("#reset").css("display", "block");
   $(".submit").attr("disabled", true);
-  $("#champImg")[0].getContext("2d").setTransform(1, 0, 0, 1, 0, 0);
+  $("#champImg")[0].getContext("2d").setTransform(scale, 0, 0, scale, 0, 0);
 }
 
 function bad(prepared)
